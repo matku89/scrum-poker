@@ -1,20 +1,20 @@
 [
   {
-    "user": "test123"
+    "userName": "test123"
   },
   {
-    "user": "user2"
+    "userName": "user2"
   },
   {
-    "user": "user3"
+    "userName": "user3"
   },
   {
-    "user": "user4"
+    "userName": "user4"
   },
   {
-    "user": "user5"
+    "userName": "user5"
   },
   {
-    "user": "user6"
+    "userName": "user6"
   }
 ]

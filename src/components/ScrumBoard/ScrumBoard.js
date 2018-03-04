@@ -7,11 +7,11 @@ class ScrumBoard extends React.Component {
     render() {
         return (
             <div>
-                <div class="ui massive input">
+                <div className="ui massive input">
                     <input type="text" placeholder="Story name..."/>
                 </div>
-                <UsersTable/>
                 <VoteCardContainer/>
+                <UsersTable users={data}/>
             </div>
 
         )

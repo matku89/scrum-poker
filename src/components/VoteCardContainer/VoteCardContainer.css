@@ -1,0 +1,8 @@
+.vote-card-list {
+    list-style: none;
+}
+
+.vote-card-list li {
+    display: inline-block;
+    margin-left: 20px;
+}

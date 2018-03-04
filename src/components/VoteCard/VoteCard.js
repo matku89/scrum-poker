@@ -1,11 +1,10 @@
 import React from "react";
+import './VoteCard.css';
 
-class VoteCard extends React.Component {
-    render() {
-        return (
-            <span>Card</span>
-        )
-    }
+function VoteCard(props) {
+    return (
+        <div onClick={props.vote} className="vote-card">{props.voteValue}</div>
+    );
 }
 
 export default VoteCard;
