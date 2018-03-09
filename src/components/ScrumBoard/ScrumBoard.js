@@ -1,9 +1,22 @@
 import React from "react";
-import data from "../../testData";
 import VoteCardContainer from "../VoteCardContainer/VoteCardContainer";
 import UsersTable from "../UsersTable/UsersTable";
 
 class ScrumBoard extends React.Component {
+   constructor() {
+       super();
+       this.state = {
+           users: []
+       };
+   }
+
+    componentDidMount() {
+        fetch('http://localhost:3000/users')
+            .then(results => results.json())
+            .then(data => this.setState({users: data}))
+            .catch(e => console.log('exception: ',e));
+    }
+
     render() {
         return (
             <div>
@@ -11,7 +24,7 @@ class ScrumBoard extends React.Component {
                     <input type="text" placeholder="Story name..."/>
                 </div>
                 <VoteCardContainer/>
-                <UsersTable users={data}/>
+                <UsersTable users={this.state.users}/>
             </div>
 
         )

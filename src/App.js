@@ -4,6 +4,11 @@ import './App.css';
 import ScrumBoard from "./components/ScrumBoard/ScrumBoard";
 
 class App extends Component {
+
+    componentDidMount() {
+
+    }
+
     render() {
         return (
             <div className="App">

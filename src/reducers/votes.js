@@ -1,6 +1,6 @@
 const initialState = null;
 
-const votings = (state = initialState, action) => {
+const votes = (state = initialState, action) => {
     switch (action.type) {
         case 'VOTE':
             return state;
