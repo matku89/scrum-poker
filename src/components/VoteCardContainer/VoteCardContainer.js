@@ -7,15 +7,15 @@ import './VoteCardContainer.css';
 
 class VoteCardContainer extends React.Component {
 
-    vote() {
-        console.log('vote');
+    vote(vote) {
+        console.log('vote: ',vote);
     }
 
     render() {
         const voteOptions = [0, 1, 2, 3, 5, 8, 13, 20, 40, 100, '?'];
 
         const voteCardList = voteOptions.map((voteOption) =>
-            <List.Item key={voteOption}><VoteCard vote={this.vote} voteValue={voteOption}/></List.Item>
+            <List.Item key={voteOption}><VoteCard vote={() => this.vote(voteOption)} voteValue={voteOption}/></List.Item>
         );
         return (
             <List horizontal size='big'>{voteCardList}</List>

@@ -1,7 +1,7 @@
 import React from "react";
 import {Table} from "semantic-ui-react";
 
-function UsersTable(props) {
+const UsersTable = (props) => {
     const users = props.users.map((user) =>
         <Table.Row key={user.userName}>
             <Table.Cell>{user.userName}</Table.Cell>
@@ -15,6 +15,6 @@ function UsersTable(props) {
             </Table.Body>
         </Table>
     )
-}
+};
 
 export default UsersTable;
