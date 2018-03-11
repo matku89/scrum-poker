@@ -1,6 +1,7 @@
 import React from "react";
 import VoteCardContainer from "../VoteCardContainer/VoteCardContainer";
 import UsersTable from "../UsersTable/UsersTable";
+import StoryTitle from "../StoryTitle/StoryTitle";
 
 class ScrumBoard extends React.Component {
    constructor() {
@@ -20,9 +21,7 @@ class ScrumBoard extends React.Component {
     render() {
         return (
             <div>
-                <div className="ui massive input">
-                    <input type="text" placeholder="Story name..."/>
-                </div>
+                <StoryTitle />
                 <VoteCardContainer/>
                 <UsersTable users={this.state.users}/>
             </div>

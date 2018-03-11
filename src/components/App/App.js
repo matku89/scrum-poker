@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Container} from 'semantic-ui-react';
 import './App.css';
-import ScrumBoard from "./components/ScrumBoard/ScrumBoard";
+import ScrumBoard from "../ScrumBoard/ScrumBoard";
 
 class App extends Component {
 

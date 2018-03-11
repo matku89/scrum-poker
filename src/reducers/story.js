@@ -7,6 +7,8 @@ const story = (state = initialState, action) => {
                 ...state,
                 youVote: action.card
             };
+        default:
+            return state
     }
 };
 
