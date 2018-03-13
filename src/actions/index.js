@@ -1,9 +1,8 @@
 let storyNumber = 0;
 
-export const vote = (id, card) => {
+export const vote = (card) => {
     return {
         type: 'VOTE',
-        id,
         card
     }
 };

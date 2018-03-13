@@ -1,9 +1,9 @@
 import React from "react";
 import './VoteCard.css';
 
-const VoteCard = (props) => {
+const VoteCard = ({onClick, voteValue, voteSelected}) => {
     return (
-        <div onClick={props.vote} className="vote-card">{props.voteValue}</div>
+        <div onClick={onClick} className={'vote-card '+ (voteSelected === voteValue ? 'selected' : '') }>{voteValue}</div>
     );
 };
 

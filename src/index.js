@@ -6,11 +6,17 @@ import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
 import {createStore} from "redux";
 import scrumPoker from "./reducers";
+import { Provider } from 'react-redux'
 
-let store = createStore(scrumPoker);
+let store = createStore(
+    scrumPoker,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 ReactDOM.render(
-    <App />,
+    <Provider store={store}>
+        <App />
+    </Provider>,
     document.getElementById('root')
 );
 registerServiceWorker();

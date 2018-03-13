@@ -5,20 +5,14 @@ import ScrumBoard from "../ScrumBoard/ScrumBoard";
 
 class App extends Component {
 
-    componentDidMount() {
-
-    }
-
     render() {
         return (
             <div className="App">
                 <Container>
                     <header>
-
                     </header>
                     <ScrumBoard/>
                     <footer>
-
                     </footer>
                 </Container>
             </div>

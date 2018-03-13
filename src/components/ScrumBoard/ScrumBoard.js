@@ -1,7 +1,7 @@
 import React from "react";
-import VoteCardContainer from "../VoteCardContainer/VoteCardContainer";
 import UsersTable from "../UsersTable/UsersTable";
 import StoryTitle from "../StoryTitle/StoryTitle";
+import StoryList from "../../containers/StoryList";
 
 class ScrumBoard extends React.Component {
    constructor() {
@@ -22,7 +22,7 @@ class ScrumBoard extends React.Component {
         return (
             <div>
                 <StoryTitle />
-                <VoteCardContainer/>
+                <StoryList />
                 <UsersTable users={this.state.users}/>
             </div>
 

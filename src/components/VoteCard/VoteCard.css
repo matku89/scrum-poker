@@ -6,6 +6,11 @@
     border: 1px solid black;
 }
 
-.vote-card-selected {
-    border-color: red;
+.selected {
+    color: white;
+    background-color: black;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
 }
