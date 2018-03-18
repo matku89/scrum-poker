@@ -1,8 +1,9 @@
+import * as types from '../actions/actionTypes';
 const initialState = {};
 
 const story = (state = initialState, action) => {
     switch (action.type) {
-        case 'VOTE':
+        case types.VOTE:
             return {
                 ...state,
                 youVote: action.card

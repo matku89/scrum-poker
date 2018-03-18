@@ -5,7 +5,7 @@ import VoteCard from "../VoteCard/VoteCard";
 import './VoteCardList.css';
 
 
-const VoteCardContainer = ({story, onCardClick}) =>  {
+const VoteCardList = ({story, onCardClick}) =>  {
 
     const voteOptions = [0, 1, 2, 3, 5, 8, 13, 20, 40, 100, '?'];
 
@@ -18,4 +18,4 @@ const VoteCardContainer = ({story, onCardClick}) =>  {
     )
 };
 
-export default VoteCardContainer;
+export default VoteCardList;

@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import {vote} from "../actions";
-import VoteCardContainer from "../components/VoteCardList/VoteCardList";
+import VoteCardList from "../components/VoteCardList/VoteCardList";
 
 
 const mapStateToProps = state => {
@@ -20,6 +20,6 @@ const mapDispatchToProps = dispatch => {
 const StoryList = connect(
     mapStateToProps,
     mapDispatchToProps
-)(VoteCardContainer);
+)(VoteCardList);
 
 export default StoryList;
