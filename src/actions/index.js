@@ -8,6 +8,27 @@ export const vote = (card) => {
     }
 };
 
+export const getUsersRequested = () => {
+    return {
+        type: types.GET_USERS_REQUESTED
+    }
+};
+
+export const getUsersDone= (data) => {
+    console.log('donbe: ',data);
+    return {
+        type: types.GET_USERS_DONE,
+        payload: data
+    }
+};
+
+export const getUsersFailure = (error) => {
+    return {
+        type: types.GET_USERS_FAILED,
+        payload: error
+    }
+};
+
 export const setStoryName = storyName => {
     return {
         type: types.SET_STORY_NAME,
@@ -21,3 +42,5 @@ export const createNewStory = () => {
         id: storyNumber++
     }
 };
+
+

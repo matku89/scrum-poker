@@ -1,7 +1,10 @@
 import React from "react";
+import {getUsersRequested} from '../../actions';
 import UsersTable from "../UsersTable/UsersTable";
 import StoryTitle from "../StoryTitle/StoryTitle";
 import StoryList from "../../containers/StoryList";
+import {connect} from "react-redux";
+
 
 class ScrumBoard extends React.Component {
    constructor() {
@@ -12,10 +15,12 @@ class ScrumBoard extends React.Component {
    }
 
     componentDidMount() {
-        fetch('http://localhost:3000/users')
-            .then(results => results.json())
-            .then(data => this.setState({users: data}))
-            .catch(e => console.log('exception: ',e));
+       this.props.dispatch(getUsersRequested());
+       console.log(this);
+        // fetch('http://localhost:3000/users')
+        //     .then(results => results.json())
+        //     .then(data => this.setState({users: data}))
+        //     .catch(e => console.log('exception: ',e));
     }
 
     render() {
@@ -30,4 +35,4 @@ class ScrumBoard extends React.Component {
     }
 }
 
-export default ScrumBoard;
+export default connect()(ScrumBoard);

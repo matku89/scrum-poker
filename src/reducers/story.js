@@ -8,6 +8,12 @@ const story = (state = initialState, action) => {
                 ...state,
                 youVote: action.card
             };
+        case types.GET_USERS_DONE: {
+            return {
+                ...state,
+                users: action.payload
+            }
+        }
         default:
             return state
     }

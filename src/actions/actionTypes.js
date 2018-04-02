@@ -1,3 +1,6 @@
 export const VOTE = 'VOTE';
 export const SET_STORY_NAME = 'SET_STORY_NAME';
 export const CREATE_NEW_STORY = 'CREATE_NEW_STORY';
+export const GET_USERS_REQUESTED = 'GET_USERS_REQUESTED';
+export const GET_USERS_DONE = 'GET_USERS_DONE';
+export const GET_USERS_FAILED = 'GET_USERS_FAILED';

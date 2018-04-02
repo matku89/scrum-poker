@@ -4,14 +4,23 @@ import 'semantic-ui-css/semantic.min.css';
 import './index.css';
 import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
-import {createStore} from "redux";
+import {createStore, applyMiddleware} from "redux";
 import scrumPoker from "./reducers";
 import { Provider } from 'react-redux'
+import createSagaMiddleware from 'redux-saga';
+import storySaga from "./sagas/storySaga";
 
-let store = createStore(
+const sagaMiddleware = createSagaMiddleware();
+
+const store = createStore(
+
     scrumPoker,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    applyMiddleware(sagaMiddleware)
+    // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+
 );
+
+sagaMiddleware.run(storySaga);
 
 ReactDOM.render(
     <Provider store={store}>
@@ -19,4 +28,6 @@ ReactDOM.render(
     </Provider>,
     document.getElementById('root')
 );
+
+
 registerServiceWorker();
