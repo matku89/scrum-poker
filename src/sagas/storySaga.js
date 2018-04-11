@@ -1,15 +1,15 @@
 import {call, takeEvery, put} from "redux-saga/effects";
-import * as actions from '../actions';
 import * as types from '../actions/actionTypes';
-import {getUsersFailure} from "../actions";
+import {getUsersFailure, getUsersDone} from "../actions";
 
 
 function* fetchUsers() {
     try {
         const response = yield call(fetch, 'http://localhost:3000/users');
-        yield put({type: actions.getUsersDone(response.json())});
+        const data = yield response.json();
+        yield put(getUsersDone(data));
     } catch(e) {
-        yield put({type: getUsersFailure(e), message: e.message});
+        yield put(getUsersFailure(e));
     }
 }
 

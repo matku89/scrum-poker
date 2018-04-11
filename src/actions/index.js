@@ -15,7 +15,6 @@ export const getUsersRequested = () => {
 };
 
 export const getUsersDone= (data) => {
-    console.log('donbe: ',data);
     return {
         type: types.GET_USERS_DONE,
         payload: data

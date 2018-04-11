@@ -1,9 +1,9 @@
 import React from "react";
 import {getUsersRequested} from '../../actions';
-import UsersTable from "../UsersTable/UsersTable";
 import StoryTitle from "../StoryTitle/StoryTitle";
 import StoryList from "../../containers/StoryList";
 import {connect} from "react-redux";
+import UsersList from "../../containers/UsersList";
 
 
 class ScrumBoard extends React.Component {
@@ -16,7 +16,6 @@ class ScrumBoard extends React.Component {
 
     componentDidMount() {
        this.props.dispatch(getUsersRequested());
-       console.log(this);
         // fetch('http://localhost:3000/users')
         //     .then(results => results.json())
         //     .then(data => this.setState({users: data}))
@@ -28,7 +27,7 @@ class ScrumBoard extends React.Component {
             <div>
                 <StoryTitle />
                 <StoryList />
-                <UsersTable users={this.state.users}/>
+                <UsersList />
             </div>
 
         )

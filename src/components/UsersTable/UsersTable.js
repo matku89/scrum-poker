@@ -1,8 +1,8 @@
 import React from "react";
 import {Table} from "semantic-ui-react";
 
-const UsersTable = (props) => {
-    const users = props.users.map((user) =>
+const UsersTable = ({usersList}) => {
+    const usersRows = usersList.map((user) =>
         <Table.Row key={user.userName}>
             <Table.Cell>{user.userName}</Table.Cell>
             <Table.Cell>Points number</Table.Cell>
@@ -17,7 +17,7 @@ const UsersTable = (props) => {
                 </Table.Row>
             </Table.Header>
             <Table.Body className="users-table">
-                {users}
+                {usersRows}
             </Table.Body>
         </Table>
     )

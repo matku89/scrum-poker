@@ -1,5 +1,7 @@
 import * as types from '../actions/actionTypes';
-const initialState = {};
+const initialState = {
+    users: []
+};
 
 const story = (state = initialState, action) => {
     switch (action.type) {
