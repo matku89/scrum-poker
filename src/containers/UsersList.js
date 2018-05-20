@@ -3,7 +3,6 @@ import UsersTable from "../components/UsersTable/UsersTable";
 
 
 const mapStateToProps = state => {
-    console.log('state: ',state);
     return {
         usersList: state.story.users
     }

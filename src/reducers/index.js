@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
 import story from "./story";
 
-const scrumPoker = combineReducers({
+const rootReducer = combineReducers({
     story
 });
 
-export default scrumPoker;
+export default rootReducer;
