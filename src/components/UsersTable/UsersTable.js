@@ -9,17 +9,27 @@ const UsersTable = ({usersList}) => {
         </Table.Row>
     );
     return(
-        <Table basic="very" celled collapsing>
-            <Table.Header>
-                <Table.Row>
-                    <Table.HeaderCell>User</Table.HeaderCell>
-                    <Table.HeaderCell>Points</Table.HeaderCell>
-                </Table.Row>
-            </Table.Header>
-            <Table.Body className="users-table">
-                {usersRows}
-            </Table.Body>
-        </Table>
+        <div className="ui vertically middle aligned grid">
+            <div className="three column row">
+                <div className="column">
+                    <Table basic="very" celled collapsing>
+                        <Table.Header>
+                            <Table.Row>
+                                <Table.HeaderCell>User</Table.HeaderCell>
+                                <Table.HeaderCell>Points</Table.HeaderCell>
+                            </Table.Row>
+                        </Table.Header>
+                        <Table.Body className="users-table">
+                            {usersRows}
+                        </Table.Body>
+                    </Table>
+                </div>
+                <div className="column">
+                    <button className="ui primary button" role="button">Show current vote results</button>
+                </div>
+
+            </div>
+        </div>
     )
 };
 
